@@ -1,0 +1,141 @@
+<!--
+<!DOCTYPE html>
+<html lang = "en">
+    <link rel = "icon" href = "../static/front_images/pawprint_128.png" type = "image/x-icon">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <link href = "../static/css/add_product.css" type = "text/css" rel = "stylesheet"/>
+
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+        <link href = "https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;800&display=swap" rel="stylesheet">
+        <title>Add Product</title>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "header">
+                <img src = "../static/front_images/pawprint_128.png" alt = "brown pawprint icon" class = "icon">
+                <span class = "PET">PET Inventory System</span>
+            </div>
+        -->
+            <!-- start of product info entries -->
+            <!--
+            <form action = "/addproduct" method = "POST" enctype = "multipart/form-data"> --> <!-- enctype required when uploading images-->
+                <!--
+                <div class = "form-group">
+                    <label for = "product-name">Product Name:</label>
+                    <input type = "text" id = "product-name" name = "product-name" required>
+                </div>
+                <div class = "form-group">
+                    <label for = "category">Product Category:</label>
+                    <select id = "category" name = "category" required>
+                        <option value = "" disabled selected>Select a category</option>
+                        <option value = "dog-food">Dog food</option>
+                        <option value = "cat-food">Cat food</option>
+                        <option value = "dog-treat">Dog treat</option>
+                        <option value = "cat-treat">Cat treat</option>
+                        <option value = "dog-toy">Dog toy</option>
+                        <option value = "cat-toy">Cat toy</option>
+                    </select>
+                </div>
+                <div class = "form-group">
+                    <label for = "price">Price:</label>
+                    <input type = "number" id = "price" name = "price" step = "0.01" required>
+                </div>
+                <div class = "form-group">
+                    <label for = "description">Description:</label>
+                    <textarea id = "description" name = "description" rows = "4" required></textarea>
+                </div>
+                <div class = "form-group">
+                    <label for = "quantity">Available Quantity:</label>
+                    <input type = "number" id= "quantity" name = "quantity" min = "0" required>
+                </div>
+                <div class = "form-group">
+                    <label for = "picture">Upload Product Images:</label>
+                    <input type = "file" id = "images" name = "images" accept = "image/*" multiple>
+                </div>
+                    <button class = "icon-button">
+                    <img src = "../static/front_images/plus-6-128.png" alt = "brown pluss sign" class = "icon">
+                </button>
+            </form>
+        </div>
+        <script src = "../static/javascript/add_product.js">
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/front_images/pawprint_128.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link href="../static/css/add_product.css" rel="stylesheet" type="text/css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;800&display=swap" rel="stylesheet">
+
+    <title>Add Product</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with icon and title -->
+        <div class="headerinfo">
+            <img src="../static/front_images/pawprint_128.png" alt="brown pawprint icon" class="icon">
+            <h1>PETS-R-US Inventory System</h1>
+        </div>
+
+        <!-- Form -->
+        <form class="create-container" action="/addproduct" method="POST" enctype="multipart/form-data">
+            <!-- Product Name -->
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required>
+
+            <!-- Product Category -->
+            <label for="category">Product Category:</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="dog-food">Dog food</option>
+                <option value="cat-food">Cat food</option>
+                <option value="dog-treat">Dog treat</option>
+                <option value="cat-treat">Cat treat</option>
+                <option value="dog-toy">Dog toy</option>
+                <option value="cat-toy">Cat toy</option>
+            </select>
+
+            <!-- Price -->
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+
+            <!-- Description -->
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <!-- Quantity -->
+            <label for="quantity">Available Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="0" required>
+
+            <!-- Drag & Drop Upload -->
+            <label>Upload Product Images:</label>
+            <div class="drag-drop" id="drag-drop">
+                <p>Drag & drop images here or click to select</p>
+                <input type="file" id="images" name="images" accept="image/*" multiple style="display:none;">
+            </div>
+
+            <!-- Preview thumbnails -->
+            <div class="preview-container" id="preview-container"></div>
+
+            <!-- Submit button -->
+            <input type="submit" value="Add Product">
+        </form>
+    </div>
+
+    <!-- JS -->
+    <script src="../static/javascript/add_product.js"></script>
+</body>
+</html>
+

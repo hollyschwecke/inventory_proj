@@ -1,3 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel = "icon" href = ""
+    <!-- image that appears on browser tab-->
+    <link rel = "icon" href = "../static/front_images/pawprint_128.png" type = "image/x-icon">
+    <head>
+        <!-- character encoding -->
+        <meta charset="UTF-8">
+        <!-- makes screen responsive to difference screen sizes-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../static/css/login.css" type="text/css" rel="stylesheet"/>
+        <!-- added Google font info -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;800&display=swap" rel="stylesheet">
+        <!-- title page (shows up on tab) -->
+        <title>Login</title>
+    </head>
+
+    <body>
+        <a href="/createaccount"></a><button id="createaccount">Create Account</button></a>
+        <div class="container">
+            <!-- header with icon -->
+            <div class="headerinfo">
+                <img src="../static/front_images/pawprint_128.png" alt="brown pawprint icon" class="icon">
+                <h1>PETS-R-US Inventory System</h1>
+            </div>
+            <!-- start of login form layout -->
+            <div class="login-container">
+                <h2>Login</h2>
+                <form id="loginform">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <input type="submit" value="Sign In">
+                </form>
+            </div>
+        </div>
+        <!-- Javascript for linking to database for user logins-->
+            <script src="../static/javascript/login.js"></script>

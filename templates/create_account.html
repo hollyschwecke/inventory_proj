@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel = "icon" href = "../static/front_images/pawprint_128.png" type = "image/x-icon">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" context = "width=device-width, initial-scale = 1.0">
+        <link href = "../static/css/create_account.css" type = "text/css" rel = "stylesheet"/>
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+        <link href = "https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;800&display=swap" rel="stylesheet">
+        <title>Create Account</title>
+    </head>
+    <body>
+        <button id = "loginbutton" onclick = "window.locate.href='/login';">Login</button>
+        <div class = "container">
+            <div class = "headerinfo">
+                <img src = "../static/front_images/pawprint_128.png" alt = "brown pawprint icon" class = "icon">
+                <h1>PET Inventory System</h1>
+            </div>
+            <div class = "create-container">
+                <h2>Create Account</h2>
+                <form id = "createForm">
+                    <label for = "email">Email:</label>
+                    <input type = "text" id = "email" name = "email" placeholder = "Enter your email" required>
+
+                    <label for = "role">Company Role:</label>
+                    <input type = "text" id = "role" name = "role" placeholder = "Enter your company role" required>
+
+                    <label for = "username">Username:</label>
+                    <input type = "text" id = "username" name = "username" placeholder = "Enter your username" required>
+
+                    <label for = "password">Password:</label>
+                    <input type = "text" id = "password" name = "password" placeholder = "Enter your password" required>
+
+                    <input type = "submit" value = "Create Account">
+                </form> 
+            </div>
+        </div>
+            <script src = "../static/javascript/create_account.js"></script>
+    </body>
+</html>
+
+    

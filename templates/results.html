@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel = "icon" href = "../static/front_images/pawprint_128.png" type = "image/x-icon"> <!-- Therese Goshen's Code to match main_page page icon -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/results.css">
+    <!-- Added Google font info -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;800&display=swap" rel="stylesheet">
+    <title>Search Results</title>
+</head>
+<body>
+    <a href="/login"><button id="signOutButton">Sign Out</button></a>
+    <h1>Search Results</h1>
+    <div id="resultsContainer">
+    <!-- dynamically search for results and return them -->
+    {% if results %}
+        <ul>
+        {% for result in results %}
+            <li>
+                <h3>{{ result.name }}</h3>
+                <p>{{ result.description }}</p>
+                <p>Price: ${{ result.price }}</p>
+                <p>Stock: {{ result.stock_quantity }}</p>
+                {% if result.image_path %}
+                    <img src="{{ result.image_path }}" alt="{{ result.name }}" width="150">
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found for your search.</p>
+    {% endif %}
+
+    <a href="/search">Go Back to Search</a>
+    <a href="/mainproductlist">Go Back to Main Product Page</a>
+    </div>
+</body>
+</html>

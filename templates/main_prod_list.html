@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <link rel = "icon" href = "../static/front_images/pawprint_128.png" type = "image/x-icon"> <!-- Therese Goshen's Code to match main_page page icon -->
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../static/css/main_prod_list.css" type="text/css" rel="stylesheet"/>
+        <!-- Added Google font info -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;800&display=swap" rel="stylesheet">
+        <!-- Title of Page (shows up on tab) -->
+        <title>Product List</title>
+    </head>
+    <body>
+        <a href="/login"><button id="signOutButton">Sign Out</button></a>
+        <div class = "headercontainer">
+            <div class="headerpets">
+                <img src="../static/front_images/pawprint_128.png" alt="brown pawprint icon" class="icon">
+                <h1>PETS-R-US Inventory System</h1>
+            </div>
+            <div class = "searchcontainer">
+                <div class="productheaderbox">
+                    <h2>Products</h2>
+                </div>
+                <!-- Redirecting to results page from search -->
+                <form action="/search/results" method="POST">
+                    <input type="text" id="searchInput" name="search" placeholder="Searching..." required>
+                    <select id="filterSelect">
+                        <option value="">All</option>
+                        <option value="Category 1">Alphabetically</option>
+                        <option value="Category 2">Product Name</option>
+                        <option value="Category 3">Price: Low to High</option>
+                        <option value="Category 4">Price: High to Low</option>
+                        <option value="Category 5">Product ID number</option>
+                    </select>
+                    <button id="searchButton">Search</button>
+                </form>
+                <a href="/addproduct"><img src="../static/front_images/plus-6-128.png" alt="brown plus sign icon" class="icon2"></a>
+            </div> 
+            <div id="usernameDisplay"></div>
+            <div id="resultsContainer" class="results-container"></div>
+        </div>
+
+        <!-- Loading JavaScript Elements, but making sure those elements exist before doing that -->
+        <script src="../static/javascript/mainproductlist.js"></script>
+    </body>
+</html>
